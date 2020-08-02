@@ -1,0 +1,50 @@
+<script language="javascript" type="text/javascript">
+//修改title icon
+console.log($("title").html());
+var stitle = $("title").html();
+stitle = stitle.replace(/ - 博客园/g, "'s blogs - To strive, to seek, to find, and not to yield.");
+console.log(stitle);
+document.title=stitle;
+//document.title="loveincode - To strive, to seek, to find, and not to yield.";
+var link = document.head.querySelector("link");
+console.log(link);
+//link.href = "https://files.cnblogs.com/files/loveincode/yu.gif";
+
+var gifURL = 'https://files.cnblogs.com/files/loveincode/Dragonball.ico',
+    linkTag = $('<link href="' + gifURL + '" rel="shortcut icon" />');
+// 请看清楚，是动态将link标签添加到head里
+$($('head')[0]).append(linkTag);
+</script>
+<div class="read-state" id="readState" style="width: 0%;"></div>
+
+<div id="topdiv" style="margin-left: 0px">
+	<center>
+<br>
+<font size="6"  color="#757575"><a href="https://loveincode.cnblogs.com/" style="color:#757575;font-family: cursive;">将琴存诗</a> </font><br/>
+<!--<hr width="150px"  style="FILTER: alpha(opacity=0,finishopacity=100,style=1)" width="80%" color=#757575 SIZE=1>-->
+<font color="#ffffff">
+<a href="https://www.cnblogs.com/" target="_blank" style="color:#ffffff;">
+人生</a>
+可以不要那么
+<font size="3"><b>
+<font color="#CD00CD">璀</font>
+<font color="#00FF00">璨</font>
+<font color="red">耀</font>
+<font color="blue">眼</font></b>
+</font>
+，只需要有
+<a href="https://i.cnblogs.com/EditPosts.aspx?opt=1" target="_blank" style="color:#ffffff;">
+一个</a>
+<font class="id" size="4" >　平凡的梦想　</font>
+<a href="https://i.cnblogs.com/" target="_blank" style="color:#ffffff;">
+足以</a>
+。—— loveincode  -_^</font>
+<a style="margin-left:20px" href="http://feed.cnblogs.com/blog/u/185616/rss">
+<img src="https://files.cnblogs.com/files/loveincode/rss.ico"><font size="4"  color="#fc6423">RSS</font></a>
+<br/>
+<!--<hr width="550px" size="1px">-->
+</form>
+</center></div>
+
+
+<a target="_blank" href="https://github.com/loveincode"><img id="githubimg" style="position: absolute;   opacity: 0.99;  z-index:999; left: 0; border: 0;" src="https://images.cnblogs.com/cnblogs_com/loveincode/1060894/o_github.png" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>

@@ -1,0 +1,119 @@
+<script language="javascript" type="text/javascript">
+//给img添加属性data-action="zoom"
+/*
+function getimg(){
+   var pic = document.getElementsByTagName('img');
+   for(i=0;i<pic.length;i++){
+      // pic[i].setAttribute('data-action','zoom');
+   }
+}
+getimg();
+*/
+//事件处理程序兼容写法
+function addEvent(target,type,handler){
+    if(target.addEventListener){
+        target.addEventListener(type,handler,false);
+    }else{
+        target.attachEvent('on'+type,function(event){
+            return handler.call(target,event);
+        });
+    }
+}
+(function(){
+	var H;
+	addEvent(window,'load',function(){
+                var v111= document.getElementById('cnblogs_post_body');
+                var postBody = $("body");
+                var v2 = $('.cnblogs_post_body');
+                if(v2!=null){
+                    console.log("v2"+v2.css('height'));
+                }
+                if(v111!=null){
+                    $("#postBody").max = H = cnblogs_post_body.clientHeight;
+                    console.log("H"+H);
+    console.log("scrollHeight"+cnblogs_post_body. scrollHeight);
+                }
+	});
+	addEvent(window,'scroll',function(){
+                if(H!=null){
+		var h = document.documentElement.scrollTop || document.body.scrollTop;
+                if(H-h<400){
+                     h = H;
+                }
+                var radio = (h/H >= 1) ? 1 : h/H;
+                var heightrate = Math.floor(100*radio);
+		//$("#readState").style.width = heightrate+'%';
+               var main111 = document.getElementById('readState');
+               main111.style.width = heightrate+'%';
+               }
+	});
+})();
+
+function GenerateContentList()
+{
+    var jquery_h3_list = $('#cnblogs_post_body h1');
+    if(jquery_h3_list.length>0)
+    {
+        var content = '<a name="_labelTop"></a>';
+        content    += '<div id="navCategory">';
+        content    += '<p style="font-size:16px"><b>章节目录</b></p>';
+        content    += '<ul>';
+        for(var i =0;i<jquery_h3_list.length;i++)
+        {
+            var go_to_top = '<div style="text-align: right"><a name="_label' + i + '"></a></div>';
+            $(jquery_h3_list[i]).before(go_to_top);
+            var li_content = '<li><a href="#_label' + i + ' " style="text-decoration: inherit;" >' + $(jquery_h3_list[i]).text() + '</a></li>';
+            content += li_content;
+        }
+        content    += '</ul>';
+        content    += '</div>';
+        if($('#cnblogs_post_body').length != 0 )
+        {
+            $($('#cnblogs_post_body')[0]).prepend(content);
+        }
+    }
+}
+GenerateContentList();
+</script>
+<div style="margin-top:-40px;margin-bottom:-20px;">
+	<center>
+	<font color="#757575">
+最简单即最美
+	<br/>
+有了信仰，自己要坚持努力 2017.07.09 21:34
+	</font>
+	<br/>
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1264359939'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1264359939%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+	</center>
+</div>
+<br/>
+<p>
+	<a id="back-to-top" title='返回顶部'><span></span></a>
+</p>
+<script type="text/javascript">
+$(document).ready(function(){
+    //首先将#back-to-top隐藏
+    $("#back-to-top").hide();
+    //当滚动条的位置处于距顶部150像素以下时，跳转链接出现，否则消失
+    $(function () {
+        $(window).scroll(function(){
+            if ($(window).scrollTop()>150){
+                $("#back-to-top").fadeIn(500);
+            }
+            else{
+                $("#back-to-top").fadeOut(500);
+            }
+        });
+        //当点击跳转链接后，回到页面顶部位置
+        $("#back-to-top").click(function(){
+            $('body,html').animate({scrollTop:0},150);
+            return false;
+        });
+    });
+});
+$(document).ready(function(){
+	$('#cnblogs_post_body pre').find('>code').parent().css({'border':'dashed 1px #aaa','border-left':'solid 2px #6CE26C'});
+	$("#cnblogs_post_body").append('<br /><center><hr />欢迎热爱Java的小伙伴学习交流 微信：9088584【验证暗号：Java后端loveincode 】<br/>欢迎同行与我交换<b>友链</b>，请邮箱联系（huonevan@gmail.com）如果你觉得博客内容有帮助，请收藏书签。<br/><b>版权声明</b>：转载文章之后必须在文章页面给出<b><font color="red">原文连接</font></b>（<a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank">创意共享3.0许可证</a>）</center>');
+});
+</script>
+<script type="text/javascript" src="https://files.cnblogs.com/files/loveincode/canvas-nest..min.js"></script>
