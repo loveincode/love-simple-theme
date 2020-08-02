@@ -1,7 +1,4 @@
-# 一个后端程序员-love Simple博客园主题分享
-
-<a name="zq3Jk"></a>
-### 引
+# 引
 由于最近有些小伙伴反馈博客园的样式好看，自定义的很清新，也有不少小伙伴说让我分享出来，今天抽空整理一下分享给大家，这些样式也是自己实习那会搞的，大概16年那会吧，时间多爱学习也爱写博文，但是都比较基础，现在偶尔也在这上边发发博文，半年一发，一年一发，确实分享太少了，大部分学习笔记一部分用了有道云笔记，后边又转战github [https://github.com/loveincode](https://github.com/loveincode) ，毕竟已经支持了免费私人仓库，好多学习成才就扔到私人仓库放着了。所以写博客的时间就变少了。<br />以下是一些小伙伴反馈的截图：<br />
 ![](https://img2020.cnblogs.com/blog/632650/202008/632650-20200802181219923-2060636615.png)
 ![](https://img2020.cnblogs.com/blog/632650/202008/632650-20200802181232739-454041306.png)
@@ -11,36 +8,36 @@
 ![](https://img2020.cnblogs.com/blog/632650/202008/632650-20200802181302573-1145725810.png)
 <br />
 <a name="1vz4q"></a>
-### 主题预览
+# 主题预览
 地址 [https://www.cnblogs.com/loveincode/](https://www.cnblogs.com/loveincode/)
 <a name="1"></a>
-#### 1 首页
+## 1 首页
 <a name="dLLNR"></a>
-##### 复杂版
+### 复杂版
 ![](https://img2020.cnblogs.com/blog/632650/202008/632650-20200802180913205-1092100004.png)
 
 <a name="0kmiK"></a>
-##### 简单版
+### 简单版
 ![](https://img2020.cnblogs.com/blog/632650/202008/632650-20200802180940988-262397401.png)
 
 <a name="XdTlM"></a>
-#### 2 文章详情页
+## 2 文章详情页
 ![](https://img2020.cnblogs.com/blog/632650/202008/632650-20200802181012809-4105248.png)
 <br />进度条，More/Simple按钮，菜单导航，返回最上按钮
 <a name="SiJY0"></a>
-#### 3 评论区
+## 3 评论区
 ![](https://img2020.cnblogs.com/blog/632650/202008/632650-20200802181031088-514633850.png)
 
 
 <a name="X7hka"></a>
-### 改造
+# 改造
 废话不多说，直接上码，很简单的一些前端代码，很久没管了，也很久没碰js css这些了，整理一下给大家，希望大家自取就行，有问题可以评论，也可以自行升级：<br />
 
 <a name="fISmW"></a>
-#### 1 首先博客皮肤选择 SimpleMemory
+## 1 首先博客皮肤选择 SimpleMemory
 ![](https://img2020.cnblogs.com/blog/632650/202008/632650-20200802181056771-894540185.png)
 
-#### 2 页面定制css代码
+## 2 页面定制css代码
 ```css
 .postTitle21 {
 	width: 100%;
@@ -794,7 +791,7 @@ pre {
 }
 ```
 <a name="9Zm9l"></a>
-#### 3 博客侧边栏公告(支持HTML代码)
+## 3 博客侧边栏公告(支持HTML代码)
 ```html
 <script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link href="https://files.cnblogs.com/files/loveincode/toolbar.css" rel="stylesheet">
@@ -850,7 +847,7 @@ pre {
 
 ```
 <a name="8xhu8"></a>
-#### 4 页脚Html代码
+## 4 页脚Html代码
 ```html
 <script language="javascript" type="text/javascript">
 //给img添加属性data-action="zoom"
@@ -974,7 +971,7 @@ $(document).ready(function(){
 
 ```
 <a name="5"></a>
-#### 5 页首Html代码
+## 5 页首Html代码
 ```html
 <script language="javascript" type="text/javascript">
 //修改title icon
@@ -1029,7 +1026,7 @@ $($('head')[0]).append(linkTag);
 
 ```
 <a name="JaW1y"></a>
-#### 6 自定义
+## 6 自定义
 以上代码里有些含有js，img代码是我上传到博客园文件中的，如
 ![](https://img2020.cnblogs.com/blog/632650/202008/632650-20200802181118140-561058994.png)
 <br />大家可以自行修改，可以替换成自己想要的img，背景图，图标之类的，或者自行改造。<br />
